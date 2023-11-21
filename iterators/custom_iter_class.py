@@ -17,12 +17,11 @@ class FishInventory:
         return self
 
     def __next__(self):
-        if self.index < len(self.available_fish):
-            fish_status = f"{self.available_fish[self.index]} is available"
-            self.index += 1
-            return fish_status
-        else:
+        if self.index >= len(self.available_fish):
             raise StopIteration
+        fish_status = f"{self.available_fish[self.index]} is available"
+        self.index += 1
+        return fish_status
 
 
 # Create an instance of the FishInventory class and iterate over it using a for-loop

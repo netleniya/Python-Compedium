@@ -14,11 +14,7 @@ def convert_time(string: str) -> str:
         if hour > 23:
             hour = "12"
     elif string.endswith("AM"):
-        if hour == 12:
-            hour = "00"
-        else:
-            hour = str(hour).zfill(2)
-
+        hour = "00" if hour == 12 else str(hour).zfill(2)
     return string.replace(string[:2], str(hour))[:-2]
 
 

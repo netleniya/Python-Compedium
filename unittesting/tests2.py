@@ -7,7 +7,6 @@ import entertainment2
 
 
 class EntertainmentSystemTests(unittest.TestCase):
-
     def test_movie_license(self):
         daily_movies = entertainment2.get_daily_movies()
         licensed_movies = entertainment2.get_licensed_movies()

@@ -8,7 +8,8 @@ def diagonal_difference(arr: list[[int]]) -> int:
 
 
 def test_diagonal_difference() -> bool:
-    ...
+    assert diagonal_difference([[11, 2, 4], [4, 5, 6], [10, 8, -12]]) == 15
+    assert diagonal_difference([[6, 8], [-6, 9]]) == 13
 
 
 if __name__ == "__main__":

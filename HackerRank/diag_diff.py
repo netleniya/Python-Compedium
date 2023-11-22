@@ -1,4 +1,19 @@
 def diagonal_difference(arr: list[[int]]) -> int:
+    """
+    Calculates the absolute difference between the sums of the primary and secondary diagonals of a square matrix.
+
+    Explanation:
+    - The function takes a square matrix as input.
+    - It calculates the sum of the elements on the primary diagonal and the sum of the elements on the secondary diagonal.
+    - The function returns the absolute difference between the two sums.
+
+    Args:
+    - arr (list[list[int]]): A square matrix represented as a list of lists of integers.
+
+    Returns:
+    - int: The absolute difference between the sums of the primary and secondary diagonals of the matrix.
+    """
+
     n = len(arr)
     d1 = sum(arr[i][i] for i in range(n))
     d2 = sum(arr[i][n - 1 - i] for i in range(n))

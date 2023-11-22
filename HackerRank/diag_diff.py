@@ -1,9 +1,7 @@
 def diagonal_difference(arr: list[[int]]) -> int:
-    d1, d2 = 0, 0
     n = len(arr)
-    for i in range(n):
-        d1 += arr[i][i]
-        d2 += arr[i][n - 1 - i]
+    d1 = sum(arr[i][i] for i in range(n))
+    d2 = sum(arr[i][n - 1 - i] for i in range(n))
     return abs(d1 - d2)
 
 

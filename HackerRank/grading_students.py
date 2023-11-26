@@ -11,8 +11,7 @@ def grade_students(grades: list[int]) -> list[int]:
         list[int]: list of grades rounded to the next multiple of 5
     """
     mult = list(map(lambda x: math.ceil(x / 5) * 5, grades))
-    scores = [b if (b - a) < 3 and a >= 38 else a for a, b in zip(grades, mult)]
-    return scores
+    return [b if (b - a) < 3 and a >= 38 else a for a, b in zip(grades, mult)]
 
 
 def test_grade_students() -> bool:

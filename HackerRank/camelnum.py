@@ -1,5 +1,16 @@
 def camel_case(in_str: str) -> int:
-    return 1 + sum(1 for c in in_str if c.isupper())
+    """
+    Counts the number of uppercase letters in a given string.
+
+    This function takes a string in_str as input and returns the count of uppercase letters in the string.
+
+    Args:
+        in_str (str): The input string to count uppercase letters from.
+
+    Returns:
+        int: The count of uppercase letters in the input string.
+    """
+    return 1 + sum(c.isupper() for c in in_str)
 
 
 def test_camel_case() -> bool:

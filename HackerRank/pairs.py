@@ -1,4 +1,17 @@
 def pairs(k, arr):
+    """
+    Counts the number of pairs in the given list with a difference of k.
+
+    This function takes an integer k and a list arr as input.
+    It returns the count of pairs of elements in arr whose difference is equal to k.
+
+    Args:
+        k (int): The desired difference between pairs.
+        arr (list): The list of integers to search for pairs.
+
+    Returns:
+        int: The count of pairs with a difference of k.
+    """
     arr_set = set(arr)
     return sum(a - k in arr_set for a in arr)
 

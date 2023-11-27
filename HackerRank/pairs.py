@@ -1,5 +1,6 @@
-def pairs(k: int, arr: list[int]) -> int:
-    return sum((a - b) == k for a in arr for b in arr)
+def pairs(k, arr):
+    arr_set = set(arr)
+    return sum(a - k in arr_set for a in arr)
 
 
 def test_pairs() -> bool:

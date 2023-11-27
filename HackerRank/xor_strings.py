@@ -15,13 +15,7 @@ def strings_xor(str1: str, str2: str) -> str:
         >>> strings_xor("010101", "010101")
         '000000'
     """
-    result = ""
-    for i in range(len(str1)):
-        if str1[i] == str2[i]:
-            result += "0"
-        else:
-            result += "1"
-    return result
+    return "".join("0" if str1[i] == str2[i] else "1" for i in range(len(str1)))
 
 
 def main() -> None:

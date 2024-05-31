@@ -1,4 +1,4 @@
-def diagonal_difference(arr: list[[int]]) -> int:
+def diagonal_difference(arr: list[int]) -> int:
     """
     Calculates the absolute difference between the sums of the primary and secondary diagonals of a square matrix.
 

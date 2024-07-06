@@ -1,17 +1,16 @@
 import pathlib
-import re
+
 import pandas as pd
 import plotly.express as px
-
-import dash_bootstrap_components as dbc
 from dash import Dash, dcc, html, Input, Output, callback
+
 from styles import SIDEBAR_STYLE, CONTENT_STYLE
 
 
 def get_data() -> pd.DataFrame:
-    ROOT_DIR = pathlib.Path(__file__).parent.resolve()
-    FILE = ROOT_DIR / "intro_bees.csv"
-    df = pd.read_csv(FILE)
+    root_dir = pathlib.Path(__file__).parent.resolve()
+    file = root_dir / "intro_bees.csv"
+    df = pd.read_csv(file)
 
     df = (
         df.groupby(["State", "ANSI", "Affected by", "Year", "state_code"])[

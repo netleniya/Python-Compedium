@@ -2,25 +2,29 @@ class Header:
     def __init__(self, text: str):
         self.text = text
 
+    def get_representation(self):
+        return self.text.upper()
+
 
 class LiteralText:
     def __init__(self, text: str):
         self.text = text
+
+    def get_representation(self):
+        return self.text
 
 
 class HorizontalLine:
     def __init__(self, width: int):
         self.width = width
 
+    def get_representation(self):
+        return "-" * self.width
+
 
 def show_document(doc):
     for element in doc:
-        if isinstance(element, Header):
-            print(element.text.upper())
-        elif isinstance(element, LiteralText):
-            print(element.text)
-        elif isinstance(element, HorizontalLine):
-            print("-" * element.width)
+        print(element.get_representation())
 
 
 def main() -> None:
